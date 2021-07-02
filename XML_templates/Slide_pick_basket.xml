@@ -1,0 +1,17 @@
+<slide_pick_basket_parameters label_name="Slide Pick Basket Parameters">
+	
+	<basket_dimensions label_name="Basket Dimensions">
+		<height label_name="Height" value=""/>
+		<width label_name="Width" value=""/>
+		<length label_name="Length" value=""/>
+		<column_distance label_name="Column Distance" value=""/>
+		<row_distance label_name="Row Distance" value=""/>
+	</basket_dimensions>
+
+	<robot_movement_parameters label_name="Basket Dimensions">
+		<height label_name="Height" value=""/>
+		<width label_name="Width" value=""/>
+		<length label_name="Length" value=""/>
+		<column_distance label_name="Column Distance" value=""/>
+		<row_distance label_name="Row Distance" value=""/>
+	</basket_dimensions>
