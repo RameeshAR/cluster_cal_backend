@@ -1,0 +1,19 @@
+<slide_drop_basket_parameters label_name="Slide Drop Basket Parameters">
+
+    <basket_dimensions label_name="Basket Dimensions">
+        <height label_name="Height" value=""/>
+        <width label_name="Width" value=""/>
+        <depth label_name="Depth" value=""/>
+        <basket_gap label_name="Basket Gap" value=""/>
+        <wall_thickness label_name="Wall Thickness" value=""/>
+    </basket_dimensions>
+
+    <robot_movement_parameters label_name="Robot Movement Parameters">
+		<time_out label_name="Time out" value=""/>
+		<velocity label_name="velocity" value=""/>
+		<movement_type label_name="Movement Type" value=""/>
+		<force label_name="Force" value=""/>
+        <z_offset label_name="Z Offset" value=""/>
+    </robot_movement_parameters>
+    
+</slide_drop_basket_parameters
