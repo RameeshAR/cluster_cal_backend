@@ -82,14 +82,14 @@ class LayoutController(QWidget):
         if "pick" in self._cal_type:
             self._ui.GDL_cam_frame.addWidget(self.pick_basket_input_panel)
             self.movie = QMovie(
-                "/home/adminspin/office/cluster_cal_backend/Ui/Gifs/coming_soon.gif")
+                "/home/adminspin/office/cluster_cal_backend/UI/Gifs/coming_soon.gif")
             self._ui.LBL_gif_anime.setMovie(self.movie)
             self.movie.start()
         if "drop" in self._cal_type:
             print("add drop")
             self._ui.GDL_cam_frame.addWidget(self.drop_basket_input_panel)
             self.movie = QMovie(
-                "/home/adminspin/office/cluster_cal_backend/Ui/Gifs/coming_soon.gif")
+                "/home/adminspin/office/cluster_cal_backend/UI/Gifs/coming_soon.gif")
             self._ui.LBL_gif_anime.setMovie(self.movie)
             self.movie.start()
 # |----------------------End of set_up_connections----------------------------|

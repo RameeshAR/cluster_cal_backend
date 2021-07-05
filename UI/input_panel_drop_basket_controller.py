@@ -4,6 +4,7 @@ from PySide2.QtWidgets import QWidget, QMessageBox, QFileDialog
 from UI.input_panel_drop_basket import Ui_WDG_input_panel_drop_basket
 from DropBasketCal.drop_basket_cal import DropBasketCalibration
 from Framework.app_context import AppContext
+from XMLTemplates import drop_basket
 
 # ==============================================================================
 # DropBasketPanelController
@@ -42,15 +43,15 @@ class DropBasketPanelController(QWidget):
 # |----------------------------------------------------------------------------|
     def calibrate_drop_basket(self):
         drop_basket_details = {}
-        drop_basket_details["basket_width"] = 48 #XML
-        drop_basket_details["basket_depth"] = 83.5 #XML
-        drop_basket_details["z_offset"] = 10 #XML
-        drop_basket_details["basket_height"] = 225 #XML
-        drop_basket_details["basket_gap"] = 14 #XML
-        drop_basket_details["wall_thickness"] = 4 #XML
-        gripper_width = 7 #XML
-        gripper_jaw_thickness = 1.5 #XML
-        std_slide_height = 75 #XML
+        drop_basket_details["basket_width"] = drop_basket.basket_dims('width') #XML
+        drop_basket_details["basket_depth"] = drop_basket.basket_dims('depth') #XML
+        drop_basket_details["z_offset"] = drop_basket.arm('z_offset') #XML
+        drop_basket_details["basket_height"] = drop_basket.basket_dims('height') #XML
+        drop_basket_details["basket_gap"] = drop_basket.basket_dims('basket_gap') #XML
+        drop_basket_details["wall_thickness"] = drop_basket.basket_dims('wall_thickness') #XML
+        gripper_width = drop_basket.arm('gripper_width') #XML
+        gripper_jaw_thickness = drop_basket.arm('gripper_jaw_thickness') #XML
+        std_slide_height = drop_basket.arm('std_slide_height') #XML
         
         fiducial_1 = f"{self._ui.DSB_px_1.value()},{self._ui.DSB_py_1.value()},{self._ui.DSB_pz_1.value()}"
         fiducial_2 = f"{self._ui.DSB_px_2.value()},{self._ui.DSB_py_2.value()},{self._ui.DSB_pz_2.value()}"

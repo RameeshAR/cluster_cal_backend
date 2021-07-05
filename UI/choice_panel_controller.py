@@ -2,7 +2,7 @@ from PySide2.QtCore import Slot, QTimer, QDateTime
 from PySide2.QtWidgets import QWidget, QMessageBox, QFileDialog
 
 from UI.choice_panel import Ui_WDG_choice_panel
-
+from XMLTemplates import pick_basket
 
 # ==============================================================================
 # ChoicePanelController
