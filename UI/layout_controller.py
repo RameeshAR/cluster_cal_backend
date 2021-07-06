@@ -9,6 +9,8 @@ from UI.input_panel_pick_basket_controller import PickBasketPanelController
 from UI.input_panel_drop_basket_controller import DropBasketPanelController
 from Framework.app_context import AppContext
 
+from XMLTemplates.pick_basket import pick
+from XMLTemplates.drop_basket import drop
 # ==============================================================================
 # LayoutController
 # ==============================================================================
@@ -46,7 +48,13 @@ class LayoutController(QWidget):
         self.choice_panel = ChoicePanelController()
         self._ui.GDL_stage_frame.addWidget(self.choice_panel)
         AppContext.get().set_choice_panel_controller(self.choice_panel)
-
+        self.choice_panel._ui.DSB_velocity.setProperty("value",pick.arm('velocity'))
+        self.choice_panel._ui.DSB_time_out.setProperty("value",pick.arm('time_out'))
+        self.choice_panel._ui.DSB_force.setProperty("value",pick.arm('force'))
+        self.choice_panel._ui.CBX_move_type.setProperty("value",pick.arm('movement_type'))
+        self.choice_panel._ui.DSB_Rx.setProperty("value",pick.arm('rx'))
+        self.choice_panel._ui.DSB_Ry.setProperty("value",pick.arm('ry'))
+        self.choice_panel._ui.DSB_Rz.setProperty("value",pick.arm('rz'))
         # self.cal_flow = CalFlowController()
         # self._ui.GDL_cam_frame_2.addWidget(self.cal_flow)
         # AppContext.get().set_cal_flow_controller(self.cal_flow)
@@ -83,6 +91,13 @@ class LayoutController(QWidget):
         print("cal_type", self._cal_type)
         if "pick" in self._cal_type:
             self.pick_basket_input_panel.show()
+            self.choice_panel._ui.DSB_velocity.setProperty("value",pick.arm('velocity'))
+            self.choice_panel._ui.DSB_time_out.setProperty("value",pick.arm('time_out'))
+            self.choice_panel._ui.DSB_force.setProperty("value",pick.arm('force'))
+            self.choice_panel._ui.CBX_move_type.setProperty("value",pick.arm('movement_type'))
+            self.choice_panel._ui.DSB_Rx.setProperty("value",pick.arm('rx'))
+            self.choice_panel._ui.DSB_Ry.setProperty("value",pick.arm('ry'))
+            self.choice_panel._ui.DSB_Rz.setProperty("value",pick.arm('rz'))
             self.movie = QMovie(
                 "/home/adminspin/office/cluster_cal_backend/UI/Gifs/UR3_Wave.gif")
             self._ui.LBL_gif_anime.setMovie(self.movie)
@@ -90,6 +105,13 @@ class LayoutController(QWidget):
         if "drop" in self._cal_type:
             print("add drop")
             self.drop_basket_input_panel.show()
+            self.choice_panel._ui.DSB_velocity.setProperty("value",drop.arm('velocity'))
+            self.choice_panel._ui.DSB_time_out.setProperty("value",drop.arm('time_out'))
+            self.choice_panel._ui.DSB_force.setProperty("value",drop.arm('force'))
+            self.choice_panel._ui.CBX_move_type.setProperty("value",drop.arm('movement_type'))
+            self.choice_panel._ui.DSB_Rx.setProperty("value",drop.arm('rx'))
+            self.choice_panel._ui.DSB_Ry.setProperty("value",drop.arm('ry'))
+            self.choice_panel._ui.DSB_Rz.setProperty("value",drop.arm('rz'))
             self.movie = QMovie(
                 "/home/adminspin/office/cluster_cal_backend/UI/Gifs/coming_soon.gif")
             self._ui.LBL_gif_anime.setMovie(self.movie)
