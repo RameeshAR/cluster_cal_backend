@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'input_panel_pick_basket.ui',
 # licensing of 'input_panel_pick_basket.ui' applies.
 #
-# Created: Tue Jul  6 12:37:44 2021
+# Created: Tue Jul  6 12:46:09 2021
 #      by: pyside2-uic  running on PySide2 5.13.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -52,7 +52,7 @@ class Ui_WDG_input_panel_pick_basket(object):
         self.gridLayout.addWidget(self.DSB_px_4, 4, 1, 1, 1)
         self.DSB_py_1 = QtWidgets.QDoubleSpinBox(self.groupBox)
         self.DSB_py_1.setMinimum(-500.0)
-        self.DSB_py_1.setMaximum(50.0)
+        self.DSB_py_1.setMaximum(500.0)
         self.DSB_py_1.setSingleStep(0.05)
         self.DSB_py_1.setObjectName("DSB_py_1")
         self.gridLayout.addWidget(self.DSB_py_1, 1, 2, 1, 1)
