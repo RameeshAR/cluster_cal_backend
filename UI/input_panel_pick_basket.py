@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'input_panel_pick_basket.ui',
 # licensing of 'input_panel_pick_basket.ui' applies.
 #
-# Created: Tue Jul  6 12:37:44 2021
+# Created: Tue Jul  6 12:46:09 2021
 #      by: pyside2-uic  running on PySide2 5.13.1
 #
 # WARNING! All changes made in this file will be lost!
