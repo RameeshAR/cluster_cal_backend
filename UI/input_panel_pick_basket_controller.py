@@ -5,6 +5,7 @@ from UI.input_panel_pick_basket import Ui_WDG_input_panel_pick_basket
 from PickBasketCal.pick_basket_cal import PickBasketCal
 from Framework.app_context import AppContext
 
+from XMLTemplates.pick_basket import pick
 # ==============================================================================
 # PickBasketPanelController
 # ==============================================================================
@@ -49,23 +50,23 @@ class PickBasketPanelController(QWidget):
         robot_movement_params["time_out"] = self._choice_panel._ui.DSB_time_out.value()
         robot_movement_params["movement_type"] = self._choice_panel._ui.CBX_move_type.currentText
         robot_movement_params["force"] = self._choice_panel._ui.DSB_force.value()
-        robot_movement_params["gripper_width"] = 7 #XML
-        robot_movement_params["gripper_jaw_thickness"] = 1.5 #XML
-        robot_movement_params["z_pick_speed"] = 0.5 #XML
-        robot_movement_params["z_place_speed"] = 0.5 #XML
-        robot_movement_params["z_offset_distance"] = 103 #XML
-        robot_movement_params["z_place_pos"] = 0 #XML
-        robot_movement_params["row_direction"] = 1 #XML
-        robot_movement_params["column_direction"]= 0 #XML
+        robot_movement_params["gripper_width"] = pick.arm("gripper_width") #XML
+        robot_movement_params["gripper_jaw_thickness"] = pick.arm("gripper_jaw_thickness") #XML
+        robot_movement_params["z_pick_speed"] = pick.arm("z_pick_speed") #XML
+        robot_movement_params["z_place_speed"] = pick.arm("z_place_speed") #XML
+        robot_movement_params["z_offset_distance"] = pick.arm("z_offset_distance") #XML
+        robot_movement_params["z_place_pos"] = pick.arm("z_place_pos") #XML
+        robot_movement_params["row_direction"] = pick.arm("row_direction") #XML
+        robot_movement_params["column_direction"]= pick.arm("column_direction") #XML
 
         basket_dimensions = {}
-        basket_dimensions["max_row_count"] = 3
-        basket_dimensions["max_column_count"] = 29
-        basket_dimensions["row_distance"] = 30
-        basket_dimensions["column_distance"] = 7
-        basket_dimensions["length"] = 222
-        basket_dimensions["width"] = 124
-        basket_dimensions["height"] = 72.64
+        basket_dimensions["max_row_count"] = pick.basket_dims("max_row_count")
+        basket_dimensions["max_column_count"] = pick.basket_dims("max_column_count")
+        basket_dimensions["row_distance"] = pick.basket_dims("row_distance")
+        basket_dimensions["column_distance"] = pick.basket_dims("column_distance")
+        basket_dimensions["length"] = pick.basket_dims("length")
+        basket_dimensions["width"] = pick.basket_dims("width")
+        basket_dimensions["height"] = pick.basket_dims("height")
         
         basket_num = self._choice_panel._ui.CBX_select_station.currentIndex()+1
         folder_path = self._choice_panel._ui.TXBX_src_path.text()
