@@ -21,31 +21,121 @@
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="2" column="1">
-       <widget class="QDoubleSpinBox" name="DSB_px_2"/>
+       <widget class="QDoubleSpinBox" name="DSB_px_2">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.000000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QDoubleSpinBox" name="DSB_px_3"/>
+       <widget class="QDoubleSpinBox" name="DSB_px_3">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.000000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="4" column="3">
-       <widget class="QDoubleSpinBox" name="DSB_pz_4"/>
+       <widget class="QDoubleSpinBox" name="DSB_pz_4">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="3" column="3">
-       <widget class="QDoubleSpinBox" name="DSB_pz_3"/>
+       <widget class="QDoubleSpinBox" name="DSB_pz_3">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.000000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QDoubleSpinBox" name="DSB_px_4"/>
+       <widget class="QDoubleSpinBox" name="DSB_px_4">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QDoubleSpinBox" name="DSB_py_1"/>
+       <widget class="QDoubleSpinBox" name="DSB_py_1">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>50.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QDoubleSpinBox" name="DSB_px_1"/>
+       <widget class="QDoubleSpinBox" name="DSB_px_1">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="4" column="2">
-       <widget class="QDoubleSpinBox" name="DSB_py_4"/>
+       <widget class="QDoubleSpinBox" name="DSB_py_4">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="3" column="2">
-       <widget class="QDoubleSpinBox" name="DSB_py_3"/>
+       <widget class="QDoubleSpinBox" name="DSB_py_3">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="0" column="2">
        <widget class="QLabel" name="LBL_Py">
@@ -69,7 +159,17 @@
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QDoubleSpinBox" name="DSB_py_2"/>
+       <widget class="QDoubleSpinBox" name="DSB_py_2">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="0" column="1">
        <widget class="QLabel" name="LBL_Px">
@@ -107,10 +207,30 @@
        </widget>
       </item>
       <item row="1" column="3">
-       <widget class="QDoubleSpinBox" name="DSB_pz_1"/>
+       <widget class="QDoubleSpinBox" name="DSB_pz_1">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
       </item>
       <item row="2" column="3">
-       <widget class="QDoubleSpinBox" name="DSB_pz_2"/>
+       <widget class="QDoubleSpinBox" name="DSB_pz_2">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
