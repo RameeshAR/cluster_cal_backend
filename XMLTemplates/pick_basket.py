@@ -4,7 +4,7 @@ from os.path import exists
 class pick:
     def basket_dims(x):
         try:
-            file_obj = etree.parse("/home/adminspin/office/cluster_cal_backend/XMLTemplates/slide_drop_basket.xml")
+            file_obj = etree.parse("/home/adminspin/office/cluster_cal_backend/XMLTemplates/slide_pick_basket.xml")
             root_tag = file_obj.getroot()
             basket_dims = root_tag.find("basket_dimensions")
             if basket_dims.find(x).attrib["type"] == 'float':
@@ -13,7 +13,7 @@ class pick:
                 var = int(basket_dims.find(x).attrib["value"])
             return var
         except Exception as msg:
-            print("Given Parameter Empty\n"+ str(msg))
+            print(x+" Given Parameter Empty\n"+ str(msg))
     def arm(x):
         try:  
             file_obj = etree.parse("/home/adminspin/office/cluster_cal_backend/XMLTemplates/slide_pick_basket.xml")
@@ -25,6 +25,6 @@ class pick:
                 var = int(arm.find(x).attrib["value"])
             return var
         except Exception as msg:
-            print("Given Parameter Empty\n"+ str(msg))
+            print(x+" Given Parameter Empty\n"+ str(msg))
 
 
