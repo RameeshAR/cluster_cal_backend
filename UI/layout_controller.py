@@ -39,8 +39,7 @@ class LayoutController(QWidget):
 # set_up_ui
 # |----------------------------------------------------------------------------|
     def set_up_ui(self):
-        self.movie = QMovie("/home/adminspin/office/cluster_cal_backend/UI/"+
-        "Gifs/UR3_Wave.gif")
+        self.movie = QMovie("UI/Gifs/UR3_Wave.gif")
         self._ui.LBL_gif_anime.setMovie(self.movie)
         print(self.movie.start())
         # self.resize()
@@ -51,7 +50,7 @@ class LayoutController(QWidget):
         self.choice_panel._ui.DSB_velocity.setProperty("value",pick.arm('velocity'))
         self.choice_panel._ui.DSB_time_out.setProperty("value",pick.arm('time_out'))
         self.choice_panel._ui.DSB_force.setProperty("value",pick.arm('force'))
-        self.choice_panel._ui.CBX_move_type.setProperty("value",pick.arm('movement_type'))
+        #self.choice_panel._ui.CBX_move_type.setProperty("value",pick.arm('movement_type'))
         self.choice_panel._ui.DSB_Rx.setProperty("value",pick.arm('rx'))
         self.choice_panel._ui.DSB_Ry.setProperty("value",pick.arm('ry'))
         self.choice_panel._ui.DSB_Rz.setProperty("value",pick.arm('rz'))
@@ -94,12 +93,12 @@ class LayoutController(QWidget):
             self.choice_panel._ui.DSB_velocity.setProperty("value",pick.arm('velocity'))
             self.choice_panel._ui.DSB_time_out.setProperty("value",pick.arm('time_out'))
             self.choice_panel._ui.DSB_force.setProperty("value",pick.arm('force'))
-            self.choice_panel._ui.CBX_move_type.setProperty("value",pick.arm('movement_type'))
+            #self.choice_panel._ui.CBX_move_type.setProperty("value",pick.arm('movement_type'))
             self.choice_panel._ui.DSB_Rx.setProperty("value",pick.arm('rx'))
             self.choice_panel._ui.DSB_Ry.setProperty("value",pick.arm('ry'))
             self.choice_panel._ui.DSB_Rz.setProperty("value",pick.arm('rz'))
             self.movie = QMovie(
-                "/home/adminspin/office/cluster_cal_backend/UI/Gifs/UR3_Wave.gif")
+                "UI/Gifs/UR3_Wave.gif")
             self._ui.LBL_gif_anime.setMovie(self.movie)
             self.movie.start()
         if "drop" in self._cal_type:
@@ -108,12 +107,12 @@ class LayoutController(QWidget):
             self.choice_panel._ui.DSB_velocity.setProperty("value",drop.arm('velocity'))
             self.choice_panel._ui.DSB_time_out.setProperty("value",drop.arm('time_out'))
             self.choice_panel._ui.DSB_force.setProperty("value",drop.arm('force'))
-            self.choice_panel._ui.CBX_move_type.setProperty("value",drop.arm('movement_type'))
+            #self.choice_panel._ui.CBX_move_type.setProperty("value",drop.arm('movement_type'))
             self.choice_panel._ui.DSB_Rx.setProperty("value",drop.arm('rx'))
             self.choice_panel._ui.DSB_Ry.setProperty("value",drop.arm('ry'))
             self.choice_panel._ui.DSB_Rz.setProperty("value",drop.arm('rz'))
             self.movie = QMovie(
-                "/home/adminspin/office/cluster_cal_backend/UI/Gifs/coming_soon.gif")
+                "UI/Gifs/coming_soon.gif")
             self._ui.LBL_gif_anime.setMovie(self.movie)
             self.movie.start()
 # |----------------------End of set_up_connections----------------------------|
