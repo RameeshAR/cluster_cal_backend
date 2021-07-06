@@ -6,6 +6,9 @@ class DropBasketCalibration:
     def get_fiducial_coords(self, fiducial_1, fiducial_2):
         point_1 = fiducial_1.split(",")
         point_2 = fiducial_2.split(",")
+        point_1 = list(map(float, point_1))
+        point_2 = list(map(float, point_2))
+        print("hello!", point_1, point_2)
         return point_1, point_2
 
     def read_csv(self, file_path):
