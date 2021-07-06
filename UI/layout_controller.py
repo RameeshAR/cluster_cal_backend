@@ -37,8 +37,8 @@ class LayoutController(QWidget):
 # set_up_ui
 # |----------------------------------------------------------------------------|
     def set_up_ui(self):
-        self.movie = QMovie("/home/adminspin/office/cluster_cal_backend/Ui/"+
-        "Gifs/coming_soon.gif")
+        self.movie = QMovie("/home/adminspin/office/cluster_cal_backend/UI/"+
+        "Gifs/UR3_Wave.gif")
         self._ui.LBL_gif_anime.setMovie(self.movie)
         print(self.movie.start())
         # self.resize()
@@ -52,7 +52,9 @@ class LayoutController(QWidget):
         # AppContext.get().set_cal_flow_controller(self.cal_flow)
         
         self.drop_basket_input_panel = DropBasketPanelController()
+        self._ui.GDL_cam_frame.addWidget(self.drop_basket_input_panel)
         AppContext.get().set_drop_basket_panel_controller(self.drop_basket_input_panel)
+        self.drop_basket_input_panel.hide()
         
         self.pick_basket_input_panel = PickBasketPanelController()
         self._ui.GDL_cam_frame.addWidget(self.pick_basket_input_panel)
@@ -74,22 +76,22 @@ class LayoutController(QWidget):
     def _onCalTypeChange(self):
         if "pick" in self._cal_type:
             print("pick removed")
-            self._ui.GDL_cam_frame.removeWidget(self.pick_basket_input_panel)
+            self.pick_basket_input_panel.hide()
         if "drop" in self._cal_type:
-            self._ui.GDL_cam_frame.removeWidget(self.drop_basket_input_panel)
+            self.drop_basket_input_panel.hide()
         self._cal_type = self.choice_panel._ui.CBX_select_cal_type.currentText().lower()
         print("cal_type", self._cal_type)
         if "pick" in self._cal_type:
-            self._ui.GDL_cam_frame.addWidget(self.pick_basket_input_panel)
+            self.pick_basket_input_panel.show()
             self.movie = QMovie(
-                "/home/adminspin/office/cluster_cal_backend/Ui/Gifs/coming_soon.gif")
+                "/home/adminspin/office/cluster_cal_backend/UI/Gifs/UR3_Wave.gif")
             self._ui.LBL_gif_anime.setMovie(self.movie)
             self.movie.start()
         if "drop" in self._cal_type:
             print("add drop")
-            self._ui.GDL_cam_frame.addWidget(self.drop_basket_input_panel)
+            self.drop_basket_input_panel.show()
             self.movie = QMovie(
-                "/home/adminspin/office/cluster_cal_backend/Ui/Gifs/coming_soon.gif")
+                "/home/adminspin/office/cluster_cal_backend/UI/Gifs/coming_soon.gif")
             self._ui.LBL_gif_anime.setMovie(self.movie)
             self.movie.start()
 # |----------------------End of set_up_connections----------------------------|
