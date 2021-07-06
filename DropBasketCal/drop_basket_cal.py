@@ -6,6 +6,8 @@ class DropBasketCalibration:
     def get_fiducial_coords(self, fiducial_1, fiducial_2):
         point_1 = fiducial_1.split(",")
         point_2 = fiducial_2.split(",")
+        point_1 = list(map(float, point_1))
+        point_2 = list(map(float, point_2))
         return point_1, point_2
 
     def read_csv(self, file_path):
@@ -23,9 +25,9 @@ class DropBasketCalibration:
             calc_px = fiducial_1[0] + ((drop_basket_details["basket_depth"] - std_slide_height)/2)
             calc_pz = fiducial_1[2] -  drop_basket_details["z_offset"]
             for basket_num in range(0, 4):
-                mov2_sx_data = self.read_csv(file_path+f"mov2_s{basket_num+1}_out.csv").loc[[0,1]]
-                drop1_sx_data = self.read_csv(file_path+f"drop1_s{basket_num+1}.csv").loc[[2]]
-                drop2_sx_data = self.read_csv(file_path+f"drop2_s{basket_num+1}.csv").loc[[1,2]]
+                mov2_sx_data = self.read_csv(file_path+f"/mov2_s{basket_num+1}_out.csv").loc[[0,1]]
+                drop1_sx_data = self.read_csv(file_path+f"/drop1_s{basket_num+1}.csv").loc[[2]]
+                drop2_sx_data = self.read_csv(file_path+f"/drop2_s{basket_num+1}.csv").loc[[1,2]]
                 data_frame_drop1_sx = [mov2_sx_data, drop1_sx_data, drop1_sx_data]
                 data_frame_drop1_sx = pd.concat(data_frame_drop1_sx, ignore_index=True)
                 data_frame_drop1_sx.loc[2, "PY"] = calc_py/1000
@@ -36,8 +38,8 @@ class DropBasketCalibration:
                 data_frame_drop2_sx = [data_frame_drop1_sx.loc[[2]], drop2_sx_data]
                 data_frame_drop2_sx = pd.concat(data_frame_drop2_sx, ignore_index=True)
                 data_frame_drop2_sx.loc[0, "PZ"] = (fiducial_1[2] - (drop_basket_details["basket_height"]/2))/1000
-                data_frame_drop1_sx.to_csv(dest_path+f"drop1_s{basket_num+1}.csv", index=False)
-                data_frame_drop2_sx.to_csv(dest_path+f"drop2_s{basket_num+1}.csv", index=False)
+                data_frame_drop1_sx.to_csv(dest_path+f"/drop1_s{basket_num+1}.csv", index=False)
+                data_frame_drop2_sx.to_csv(dest_path+f"/drop2_s{basket_num+1}.csv", index=False)
                 calc_py = calc_py + drop_basket_details["basket_gap"] + drop_basket_details["basket_width"]
             return True, "Calibration successful"
         except Exception as msg:

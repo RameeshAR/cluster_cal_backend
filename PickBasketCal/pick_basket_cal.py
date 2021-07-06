@@ -6,10 +6,11 @@ class PickBasketCal:
 
     def get_input_pose(self, fiducial_1, fiducial_2, fiducial_3, fiducial_4):
         print(fiducial_1, fiducial_2, fiducial_3, fiducial_4)
-        point_1 = fiducial_1.split(",")
-        point_2 = fiducial_2.split(",")
-        point_3 = fiducial_3.split(",")
-        point_4 = fiducial_4.split(",")
+        point_1 = list(map(float, fiducial_1.split(",")))
+        point_2 = list(map(float, fiducial_2.split(",")))
+        point_3 = list(map(float, fiducial_3.split(",")))
+        point_4 = list(map(float, fiducial_4.split(",")))
+        print("here-----", point_1, point_2, point_3, point_4)
         return point_1, point_2, point_3, point_4
     
     def calc_cal_outcomes(self, basket_num, folder_path, robot_movement_params, dest_path,
@@ -38,7 +39,7 @@ class PickBasketCal:
             dataframe_basket_ref.loc[basket_num-1, "TO"] = robot_movement_params["time_out"]
             dataframe_basket_ref.loc[basket_num-1, "MOVELJ"] = robot_movement_params["movement_type"]
             dataframe_basket_ref.loc[basket_num-1, "FORCE"] = robot_movement_params["force"]
-            dataframe_basket_ref.to_csv(dest_path+f"bref.csv", index=False)
+            dataframe_basket_ref.to_csv(dest_path+f"/bref.csv", index=False)
 
             # basketsett calculations
             px1 = (fiducial_1[0] - (robot_movement_params["gripper_width"] / 2))
@@ -79,8 +80,8 @@ class PickBasketCal:
                 * basket_dimensions["row_distance"])/1000
             dataframe_basket_set.loc[basket_num-1, "Z Place Offset Row"] = 0/1000
 
-            dataframe_basket_ref.to_csv(dest_path+"bref.csv", index=False)
-            dataframe_basket_set.to_csv(dest_path+"BasketSett.csv", index=False)
+            dataframe_basket_ref.to_csv(dest_path+"/bref.csv", index=False)
+            dataframe_basket_set.to_csv(dest_path+"/BasketSett.csv", index=False)
             return True, "Calibration successful"
         except Exception as msg:
             print(msg)

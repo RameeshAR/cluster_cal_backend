@@ -28,7 +28,7 @@ class DropBasketPanelController(QWidget):
         self._ui = Ui_WDG_input_panel_drop_basket()
         self._ui.setupUi(self)
         self.set_up_connections()
-        self._choice_panel = AppContext.get().get_choice_panel_controller
+        self._choice_panel = AppContext.get().get_choice_panel_controller()
         self._calibrate = DropBasketCalibration()
 
 # |----------------------------------------------------------------------------|
@@ -64,9 +64,9 @@ class DropBasketPanelController(QWidget):
                 gripper_width, gripper_jaw_thickness,
                 std_slide_height, dest_path, fiducial_1, fiducial_2)
             if status:
-                QMessageBox.critical(self, msg, QMessageBox.Ok)
+                QMessageBox.critical(self, "Alert", msg, QMessageBox.Ok)
             else:
-                QMessageBox.critical(self, f"Oops!, {msg}", QMessageBox.Ok)
+                QMessageBox.critical(self, "Alert", f"Oops!, {msg}", QMessageBox.Ok)
         else:
-            QMessageBox.critical(self, "please select src and dest folders",
+            QMessageBox.critical(self, "Alert", "please select src and dest folders",
             QMessageBox.Ok)

@@ -84,10 +84,10 @@ class PickBasketPanelController(QWidget):
                 fiducial_2, fiducial_3, fiducial_4)
             print("=========")
             if status:
-                QMessageBox.critical(msg, QMessageBox.Ok)
+                QMessageBox.critical(self, "Alert", msg, QMessageBox.Ok)
             else:
-                QMessageBox.critical(f"Oops!, {msg}", QMessageBox.Ok)
+                QMessageBox.critical(self, "Alert", f"Oops!, {msg}", QMessageBox.Ok)
         else:
-            QMessageBox.critical("please select src and dest path",
+            QMessageBox.critical(self, "Alert", "please select src and dest path",
                                         QMessageBox.Ok)
 # -------------End of calibrate_pick_basket----------------------------|
