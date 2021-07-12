@@ -1,0 +1,30 @@
+<scanner_input label_name="Scanner Input">
+
+    <coarse_input label_name="Coarse Input">
+        <px label_name="Px" value="225" type="float"/>
+        <py label_name="Py" value="48" type="float"/>
+        <pz label_name="Pz" value="83.5" type="float"/>
+        <rx label_name="Rx" value="4" type="float"/>
+        <ry label_name="Ry" value="4" type="float"/>
+        <rz label_name="Rz" value="4" type="float"/>
+        <time_out label_name="Time out" value="15" type="int"/>
+		<velocity label_name="velocity" value="1" type="float"/>
+		<movement_type label_name="Movement Type" value="1" type="float"/>
+		<force label_name="Force" value="1" type="float"/>
+
+    </coarse_input>
+
+    <fine_input label_name="Fine Input">
+        <px label_name="Px" value="225" type="float"/>
+        <py label_name="Py" value="48" type="float"/>
+        <pz label_name="Pz" value="83.5" type="float"/>
+        <rx label_name="Rx" value="4" type="float"/>
+        <ry label_name="Ry" value="4" type="float"/>
+        <rz label_name="Rz" value="4" type="float"/>
+        <time_out label_name="Time out" value="15" type="int"/>
+		<velocity label_name="velocity" value="1" type="float"/>
+		<movement_type label_name="Movement Type" value="1" type="float"/>
+		<force label_name="Force" value="1" type="float"/>
+    </fine_input>
+    
+</scanner_input>

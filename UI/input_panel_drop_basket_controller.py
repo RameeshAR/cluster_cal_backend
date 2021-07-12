@@ -42,6 +42,7 @@ class DropBasketPanelController(QWidget):
 # calibrate_drop_basket
 # |----------------------------------------------------------------------------|
     def calibrate_drop_basket(self):
+        
         drop_basket_details = {}
         drop_basket_details["basket_width"] = drop.basket_dims("width") #XML
         drop_basket_details["basket_depth"] = drop.basket_dims("depth") #XML

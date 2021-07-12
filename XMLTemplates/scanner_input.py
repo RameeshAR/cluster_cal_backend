@@ -1,12 +1,12 @@
 from lxml import etree
 from os.path import exists
 
-class pick:
-    def basket_dims(x):
+class scanner:
+    def coarse_input(x):
         try:
-            file_obj = etree.parse("XMLTemplates/slide_pick_basket.xml")
+            file_obj = etree.parse("XMLTemplates/scanner_input.xml")
             root_tag = file_obj.getroot()
-            basket_dims = root_tag.find("basket_dimensions")
+            basket_dims = root_tag.find("coarse_input")
             if basket_dims.find(x).attrib["type"] == 'float':
                 var = float(basket_dims.find(x).attrib["value"])
             elif basket_dims.find(x).attrib["type"] == 'int':
@@ -14,11 +14,11 @@ class pick:
             return var
         except Exception as msg:
             print(x+" Given Parameter Empty\n"+ str(msg))
-    def arm(x):
+    def fine_input(x):
         try:  
-            file_obj = etree.parse("XMLTemplates/slide_pick_basket.xml")
+            file_obj = etree.parse("XMLTemplates/scanner_input.xml")
             root_tag = file_obj.getroot()
-            arm = root_tag.find("robot_movement_parameters")
+            arm = root_tag.find("fine_input")
             if arm.find(x).attrib["type"] == 'float':
                 var = float(arm.find(x).attrib["value"])
             elif arm.find(x).attrib["type"] == 'int':
@@ -26,5 +26,3 @@ class pick:
             return var
         except Exception as msg:
             print(x+" Given Parameter Empty\n"+ str(msg))
-
-

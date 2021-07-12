@@ -7,10 +7,14 @@ from UI.layout import Ui_WDG_layout
 from UI.cal_flow_controller import CalFlowController
 from UI.input_panel_pick_basket_controller import PickBasketPanelController 
 from UI.input_panel_drop_basket_controller import DropBasketPanelController
+from UI.scanner_coarse_controller import sc_controller 
+from UI.scanner_fine_controller import sf_controller 
 from Framework.app_context import AppContext
 
 from XMLTemplates.pick_basket import pick
 from XMLTemplates.drop_basket import drop
+from XMLTemplates.scanner_input import scanner
+from UI.scanner_coarse import Ui_coarse_input
 # ==============================================================================
 # LayoutController
 # ==============================================================================
@@ -33,6 +37,8 @@ class LayoutController(QWidget):
         self._ui.setupUi(self)
         self.set_up_ui()
         self._cal_type = self.choice_panel._ui.CBX_select_cal_type.currentText().lower()
+        self._station = self.choice_panel._ui.CBX_select_station.currentText().lower()
+        
         self.set_up_connections()
 
 # |----------------------------------------------------------------------------|
@@ -66,6 +72,18 @@ class LayoutController(QWidget):
         self.pick_basket_input_panel = PickBasketPanelController()
         self._ui.GDL_cam_frame.addWidget(self.pick_basket_input_panel)
         AppContext.get().set_pick_basket_panel_controller(self.pick_basket_input_panel)
+        self.pick_basket_input_panel.show()
+
+        self.sc_input_panel = sc_controller()
+        self._ui.GDL_cam_frame.addWidget(self.sc_input_panel)
+        AppContext.get().set_sc_panel(self.sc_input_panel)
+        self.sc_input_panel.hide()
+        
+        self.sf_input_panel = sf_controller()
+        self._ui.GDL_cam_frame.addWidget(self.sf_input_panel)
+        AppContext.get().set_sf_panel(self.sf_input_panel)
+        self.sf_input_panel.hide()
+        
 
 # |----------------------End of set_up_ui----------------------------|
 
@@ -80,12 +98,16 @@ class LayoutController(QWidget):
 # |----------------------------------------------------------------------------|
 # _onCalTypeChange
 # |----------------------------------------------------------------------------|
+
     def _onCalTypeChange(self):
         if "pick" in self._cal_type:
             print("pick removed")
             self.pick_basket_input_panel.hide()
         if "drop" in self._cal_type:
             self.drop_basket_input_panel.hide()
+        if "scanner" in self._cal_type:
+            self.sc_input_panel.hide()
+        
         self._cal_type = self.choice_panel._ui.CBX_select_cal_type.currentText().lower()
         print("cal_type", self._cal_type)
         if "pick" in self._cal_type:
@@ -115,4 +137,14 @@ class LayoutController(QWidget):
                 "UI/Gifs/coming_soon.gif")
             self._ui.LBL_gif_anime.setMovie(self.movie)
             self.movie.start()
+        if "scanner" in self._cal_type:
+            print("scanner")
+            self.sc_input_panel.show()
+            self.movie = QMovie(
+                "UI/Gifs/home.gif")
+            self._ui.LBL_gif_anime.setMovie(self.movie)
+            self.movie.start()
+
+
+
 # |----------------------End of set_up_connections----------------------------|

@@ -48,7 +48,7 @@ class PickBasketPanelController(QWidget):
         robot_movement_params["rz"] = self._choice_panel._ui.DSB_Rz.value()
         robot_movement_params["velocity"] = self._choice_panel._ui.DSB_velocity.value()
         robot_movement_params["time_out"] = self._choice_panel._ui.DSB_time_out.value()
-        robot_movement_params["movement_type"] = self._choice_panel._ui.CBX_move_type.currentText
+        robot_movement_params["movement_type"] = (self._choice_panel._ui.CBX_move_type.currentIndex()-1)/-1
         robot_movement_params["force"] = self._choice_panel._ui.DSB_force.value()
         robot_movement_params["gripper_width"] = pick.arm("gripper_width") #XML
         robot_movement_params["gripper_jaw_thickness"] = pick.arm("gripper_jaw_thickness") #XML

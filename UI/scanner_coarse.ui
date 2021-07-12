@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>coarse_input</class>
+ <widget class="QWidget" name="coarse_input">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1149</width>
+    <height>249</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Scanner Coarse Input</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="13">
+       <widget class="QDoubleSpinBox" name="sc_rz">
+        <property name="minimum">
+         <double>-7.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>7.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.025000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="8">
+       <widget class="QDoubleSpinBox" name="sc_rx">
+        <property name="minimum">
+         <double>-7.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>7.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.025000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="sc_lpz">
+        <property name="text">
+         <string>Pz (mm)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QDoubleSpinBox" name="sc_px">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QDoubleSpinBox" name="sc_py">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="10">
+       <widget class="QDoubleSpinBox" name="sc_ry">
+        <property name="minimum">
+         <double>-7.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>7.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.025000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6">
+       <widget class="QDoubleSpinBox" name="sc_pz">
+        <property name="minimum">
+         <double>-500.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>500.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="10">
+       <widget class="QLabel" name="sc_lry">
+        <property name="text">
+         <string>Ry (radians)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="sc_lpy">
+        <property name="text">
+         <string>Py (mm)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="8">
+       <widget class="QLabel" name="sc_lrx">
+        <property name="text">
+         <string>Rx (radians)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="sc_lpx">
+        <property name="text">
+         <string>Px (mm)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="13">
+       <widget class="QLabel" name="sc_lrz">
+        <property name="text">
+         <string>Rz (radians)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="sc_fiducial">
+        <property name="text">
+         <string>Coarse Fiducial</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="sc_next">
+     <property name="text">
+      <string>Next</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

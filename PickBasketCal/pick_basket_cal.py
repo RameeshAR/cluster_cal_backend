@@ -65,7 +65,7 @@ class PickBasketCal:
             dataframe_basket_set.loc[basket_num-1, "Col Dist"] = basket_dimensions["column_distance"]/1000
             dataframe_basket_set.loc[basket_num-1, "Z Pick Speed"] = robot_movement_params["z_pick_speed"]
             dataframe_basket_set.loc[basket_num-1, "Z Place Speed"] = robot_movement_params["z_place_speed"]
-            dataframe_basket_set.loc[basket_num-1, "Z Pick Pos"] = -robot_movement_params["z_offset_distance"]
+            dataframe_basket_set.loc[basket_num-1, "Z Pick Pos"] = -robot_movement_params["z_offset_distance"]/1000
             dataframe_basket_set.loc[basket_num-1, "Z Place Pos"] = robot_movement_params["z_place_pos"]
             dataframe_basket_set.loc[basket_num-1, "Row Dir"] = robot_movement_params["row_direction"]
             dataframe_basket_set.loc[basket_num-1, "Col Dir"] = robot_movement_params["column_direction"]
