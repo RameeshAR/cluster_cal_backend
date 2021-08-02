@@ -11,7 +11,6 @@
 		<velocity label_name="velocity" value="1" type="float"/>
 		<movement_type label_name="Movement Type" value="1" type="float"/>
 		<force label_name="Force" value="1" type="float"/>
-
     </coarse_input>
 
     <fine_input label_name="Fine Input">

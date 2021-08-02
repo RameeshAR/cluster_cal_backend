@@ -45,7 +45,7 @@ class MainWindow(QMainWindow):
 
         # Add Calibration Tab.
         calibration_controller_obj = LayoutController()
-        self.TWG_tab.addTab(calibration_controller_obj, "RoboCal")
+        self.TWG_tab.addTab(calibration_controller_obj, "Cluster Cal")
 
         # Set First tab as Current page.
         self.TWG_tab.setCurrentIndex(0)
