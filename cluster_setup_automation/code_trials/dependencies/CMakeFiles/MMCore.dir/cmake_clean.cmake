@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/CircularBuffer.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Configuration.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/CoreCallback.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/CoreProperty.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/DeviceManager.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/AutoFocusInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/CameraInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/DeviceInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/GalvoInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/HubInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/ImageProcessorInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/MagnifierInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/SLMInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/SerialInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/ShutterInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/SignalIOInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/StageInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/StateInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Devices/XYStageInstance.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Error.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/FrameBuffer.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Host.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/LibraryInfo/LibraryPathsUnix.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/LibraryInfo/LibraryPathsWindows.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/LoadableModules/LoadedDeviceAdapter.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/LoadableModules/LoadedModule.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/LoadableModules/LoadedModuleImpl.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/LoadableModules/LoadedModuleImplUnix.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/LogManager.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/Logging/Metadata.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/MMCore.cpp.o"
+  "CMakeFiles/MMCore.dir/micro-manager/MMCore/PluginManager.cpp.o"
+  "libMMCore.pdb"
+  "libMMCore.so"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/MMCore.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

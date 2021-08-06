@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+b275f5b7a9dde86f8096f8cc4f502a7f CMakeFiles/MMCorePy_swig_compilation
+2bc395284535426f6c39ff0e218e869f CMakeFiles/_MMCorePy.dir/MMCorePyPYTHON.stamp

@@ -1,0 +1,16 @@
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/install/strip.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/install/local.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/install.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/list_install_components.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/edit_cache.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/CaptureTest.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/ut_v4l.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/LibraryTest.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/MMCore.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/MMCoreObj.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/_MMCorePy.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/MMDevice.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/mmgr_dal_SerialManager.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/MMCorePy_swig_compilation.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/rebuild_cache.dir
+/home/adminspin/Music/revolutionary_ideas/cluster_setup_automation/code_trials/dependencies/CMakeFiles/mmgr_dal_MatrixVision.dir
